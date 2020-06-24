@@ -19,12 +19,12 @@ from django.conf import settings
 from django.conf.urls import include
 from django.conf.urls.static import static
 
-from .views import HealthCheckView
+from .views import HealthCheckView, RqTestView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/v1/posts/", include("post.urls")),
     path("django-rq/", include("django_rq.urls")),
     path("api/healthcheck/", HealthCheckView.as_view()),
-
+    path("rq-test", RqTestView.as_view()),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
