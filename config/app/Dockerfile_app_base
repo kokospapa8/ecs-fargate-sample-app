@@ -1,0 +1,15 @@
+# Creating image based on official python3 image
+FROM python:3.6
+
+# Your contacts, so people blame you afterwards
+MAINTAINER Jinwook Baek <nujabes8@mymusictaste.com>
+
+# Sets dumping log messages directly to stream instead of buffering
+ENV PYTHONUNBUFFERED 1
+
+# Creating and putting configurations
+RUN mkdir /config
+ADD config/app /config/
+
+# Installing all python dependencies
+RUN pip install -r /config/requirements.txt

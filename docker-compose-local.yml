@@ -1,0 +1,56 @@
+# File structure version
+version: '3'
+
+services:
+  # Our django application
+  # Build from remote dockerfile
+  # Connect local app folder with image folder, so changes will be pushed to image instantly
+  # Open port 8000
+  app:
+    build:
+      context: .
+      dockerfile: config/app/Dockerfile_app
+    hostname: app
+    volumes:
+      - ./ecs-sample:/ecs-sample
+    expose:
+      - "8000"
+    environment:
+      - SECRET_KEY
+      - ENV=dev
+      - DJANGO_SETTINGS_MODULE=settings.local
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+      - rq
+
+  rq:
+    build:
+      context: .
+      dockerfile: config/app/Dockerfile_rq
+    hostname: rq
+    volumes:
+      - ./ecs-sample:/ecs-sample
+    environment:
+      - SECRET_KEY
+      - ENV=dev
+      - DJANGO_SETTINGS_MODULE=settings.local
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:5.0.5
+    expose:
+      - "6379"
+    restart: always
+
+  nginx:
+    image: nginx
+    hostname: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./config/nginx/app_local.conf:/etc/nginx/conf.d/app_local.conf
+    depends_on:
+      - app

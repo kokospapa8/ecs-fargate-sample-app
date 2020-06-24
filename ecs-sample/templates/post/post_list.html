@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+<ul>
+    {% if object_list %}
+        {% for post in object_list %}
+            <li>
+                <div>{{post.id}} - {{post.title}}: {{post.body}} <br> by {{post.user.username}}</div>
+            </li>
+        {% endfor %}
+    {% else %}
+        No items
+    {% endif %}
+
+</ul>
+</body>
+</html>

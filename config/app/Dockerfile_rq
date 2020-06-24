@@ -1,0 +1,15 @@
+#TODO: change dockerhub to ecr
+FROM kokospapa8/django-sample:base
+
+# Installing all python dependencies
+RUN pip install -r /config/requirements.txt
+
+# When container starts, this script will be executed.
+# Note that it is NOT executed during building
+CMD ["sh", "/config/django_rq.sh"]
+
+# Creating and putting application inside container
+# and setting it to working directory (meaning it is going to be default)
+RUN mkdir /ecs-sample
+WORKDIR /ecs-sample
+ADD ecs-sample /ecs-sample/

@@ -1,0 +1,13 @@
+click==7.1.2
+Django==2.2.3
+django-mysql==3.2.0
+django-redis==4.10.0
+django-rq==2.3.2
+djangorestframework==3.10.1
+gunicorn==19.9.0
+hiredis==1.0.0
+mysqlclient==1.4.4
+pytz==2020.1
+redis==3.5.3
+rq==1.4.2
+sqlparse==0.3.1
