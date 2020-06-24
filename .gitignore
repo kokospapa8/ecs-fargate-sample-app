@@ -19,7 +19,7 @@ lib64/
 parts/
 sdist/
 var/
-wheels/
+wheels/x
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/

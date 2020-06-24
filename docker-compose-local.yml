@@ -22,13 +22,13 @@ services:
       - REDIS_HOST=redis
     depends_on:
       - redis
-      - rq
+      - worker
 
-  rq:
+  worker:
     build:
       context: .
-      dockerfile: config/app/Dockerfile_rq
-    hostname: rq
+      dockerfile: config/app/Dockerfile_worker
+    hostname: worker
     volumes:
       - ./ecs-sample:/ecs-sample
     environment:

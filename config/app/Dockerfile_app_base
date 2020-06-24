@@ -2,7 +2,7 @@
 FROM python:3.6
 
 # Your contacts, so people blame you afterwards
-MAINTAINER Jinwook Baek <nujabes8@mymusictaste.com>
+MAINTAINER Jinwook Baek <kokos.papa8@gmail.com>
 
 # Sets dumping log messages directly to stream instead of buffering
 ENV PYTHONUNBUFFERED 1
