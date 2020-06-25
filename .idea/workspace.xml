@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d98a75be-db77-4de1-b54f-3a5e8f3b3e05" name="Default Changelist" comment="" />
+    <list default="true" id="d98a75be-db77-4de1-b54f-3a5e8f3b3e05" name="Default Changelist" comment="added staging docker-compose">
+      <change afterPath="$PROJECT_DIR$/config/cloudformation/cf-ecs-sample.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-module-manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-source-manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-source-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/_backend.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/main_providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-east-2/aws-data/.terragrunt-cache/oSzjdld_N-k8E7uN8t1VtsVevRs/pnA2FicKsmtIFksID5EipZ9Nn-s/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-module-manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-source-manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/.terragrunt-source-version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/_backend.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/main.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/main_providers.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/outputs.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/.terragrunt-cache/DrlqBlof6OO0wVycQlWkjPX5ttE/pnA2FicKsmtIFksID5EipZ9Nn-s/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/aws-data/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-api/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-ec2/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-lb/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-loadbalancer/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-mysql/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-redis/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample-worker/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/ecs-sample/terragrunt.hcl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/terraform/ecs-sample/us-west-1/terragrunt.hcl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +58,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dkjwV6XrBRSJNYHsaSPtVgkzWX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ecs-sample/post" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/cloudformation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -40,15 +76,18 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/cloudformation" />
+      <recent name="$PROJECT_DIR$/config/terraform/ecs-sample" />
+      <recent name="$PROJECT_DIR$/ecs-sample/settings" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/ecs-sample/post" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/terraform" />
+      <recent name="$PROJECT_DIR$/ecs-sample/ecs-sample" />
       <recent name="$PROJECT_DIR$/config/app" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/ecs-sample/settings" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ecs-sample/post" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/ecs-sample/settings" />
     </key>
   </component>
@@ -76,8 +115,37 @@
       <option name="presentableId" value="Default" />
       <updated>1592976224093</updated>
       <workItem from="1592976226849" duration="6644000" />
-      <workItem from="1592999075291" duration="3993000" />
+      <workItem from="1592999075291" duration="17724000" />
     </task>
+    <task id="LOCAL-00001" summary="amend security vulnerability">
+      <created>1593016889885</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593016889885</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rq -&gt; worker">
+      <created>1593022405974</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593022405974</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added async worker test view">
+      <created>1593023673026</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593023673026</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added staging docker-compose">
+      <created>1593078758994</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593078758994</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +161,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="amend security vulnerability" />
+    <MESSAGE value="rq -&gt; worker" />
+    <MESSAGE value="added async worker test view" />
+    <MESSAGE value="added staging docker-compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="added staging docker-compose" />
   </component>
 </project>
