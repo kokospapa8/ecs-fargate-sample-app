@@ -1,0 +1,19 @@
+# File structure version
+version: '3'
+
+services:
+
+  worker:
+    build:
+      context: .
+      dockerfile: config/app/Dockerfile_worker
+    hostname: worker
+    volumes:
+      - ./ecs-sample:/ecs-sample
+    environment:
+      - SECRET_KEY
+      - ENV=staging
+      - DJANGO_SETTINGS_MODULE=settings.staging
+      - REDIS_HOST
+      - DB_PASSWORD
+      - DB_HOST

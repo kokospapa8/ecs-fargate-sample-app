@@ -4,7 +4,7 @@ from django_rq import job
 
 async def sleep():
     counter = 0
-    while counter < 30:
+    while counter < 10:
         # suspend execution
         await asyncio.sleep(1000)
         print(counter)
