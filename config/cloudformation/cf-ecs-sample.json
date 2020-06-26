@@ -1,5 +1,28 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters" : {
+    "DBUsername" : {
+      "NoEcho" : "true",
+      "Description" : "Username for MySQL database access",
+
+      "Type" : "String",
+      "MinLength" : "1",
+      "MaxLength" : "16",
+      "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*",
+      "ConstraintDescription" : "must begin with a letter and contain only alphanumeric characters."
+    },
+    "DBPassword" : {
+      "NoEcho" : "true",
+      "Description" : "Password MySQL database access",
+
+      "Type" : "String",
+      "MinLength" : "8",
+
+      "MaxLength" : "41",
+      "AllowedPattern" : "[a-zA-Z0-9]*",
+      "ConstraintDescription" : "must contain only alphanumeric characters."
+    }
+  },
   "Resources": {
     "vpc-ecs-sample": {
       "Type": "AWS::EC2::VPC",
@@ -142,6 +165,28 @@
         "Domain": "vpc"
       }
     },
+    "RDSCluster" : {
+      "Type": "AWS::RDS::DBCluster",
+      "Properties" : {
+          "MasterUsername" : {
+              "Ref": "DBUsername"
+          },
+          "MasterUserPassword" : {
+              "Ref": "DBPassword"
+          },
+          "DBClusterIdentifier" : "ecs-sample",
+          "Engine" : "aurora",
+          "EngineVersion" : "5.6.10a",
+          "EngineMode" : "serverless",
+          "ScalingConfiguration" : {
+              "AutoPause" : true,
+              "MinCapacity" : 4,
+              "MaxCapacity" : 8,
+              "SecondsUntilAutoPause" : 1000
+          }
+      }
+    },
+
     "instance-app-api": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
