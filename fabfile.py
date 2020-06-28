@@ -4,16 +4,17 @@ from fabric import Connection, task
 
 SSH_KEY = ""
 
+# this function only gets ec2 on public subnets
 def _get_ec2_instances():
     instances = []
     connection = connect_to_region(
-        region_name = "ap-northeast-2", #TODO beta env
+        region_name = "us-east-2", #TODO beta env
         aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
         aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY")
     )
 
     try:
-        reservations = connection.get_all_reservations(filters= {'tag:Name':'ecs-sample','tag:env':'staging'})
+        reservations = connection.get_all_reservations(filters= {'tag:Name':'ecs-sample-api','tag:env':'staging'})
         for r in reservations:
             for instance in r.instances:
                 instances.append(instance)
