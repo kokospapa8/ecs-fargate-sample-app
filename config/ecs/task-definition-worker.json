@@ -1,23 +1,16 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::<account>:role/sampleECSTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::<acoountid>:role/sampleECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/ecs-sample-worker",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": null,
       "portMappings": [],
-      "command": null,
-      "linuxParameters": null,
       "cpu": 0,
       "environment": [
         {
@@ -33,11 +26,7 @@
           "value": "prod"
         }
       ],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
       "mountPoints": [],
-      "workingDirectory": null,
       "secrets": [
         {
           "valueFrom": "arn:aws:ssm:us-east-2:<acoountid>:parameter/ecs-sample/prod/DB_PASSWORD",
@@ -56,45 +45,25 @@
           "name": "SECRET_KEY"
         }
       ],
-      "dockerSecurityOptions": null,
-      "memory": null,
       "memoryReservation": 512,
       "volumesFrom": [],
-      "stopTimeout": null,
       "image": "<acoountid>.dkr.ecr.us-east-2.amazonaws.com/ecs-sample-worker:latest",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
       "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
       "dockerLabels": {
         "name": "ecs-sample-worker",
         "env": "prod"
       },
-      "systemControls": null,
-      "privileged": null,
-      "name": "rq"
+      "name": "worker"
     }
   ],
   "placementConstraints": [],
   "memory": "512",
   "taskRoleArn": "arn:aws:iam::<acoountid>:role/sampleECSTaskExecutionRole",
   "family": "ecs-sample-worker",
-  "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
   "cpu": "256",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
   "volumes": []
 }

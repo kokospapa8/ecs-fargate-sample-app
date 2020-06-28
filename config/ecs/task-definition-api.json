@@ -1,20 +1,15 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::<account>:role/sampleECSTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::<account_id>:role/sampleECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/ecs-sample-app",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": null,
       "portMappings": [
         {
           "hostPort": 8000,
@@ -22,8 +17,6 @@
           "containerPort": 8000
         }
       ],
-      "command": null,
-      "linuxParameters": null,
       "cpu": 0,
       "environment": [
         {
@@ -39,40 +32,29 @@
           "value": "prod"
         }
       ],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
       "mountPoints": [],
-      "workingDirectory": null,
       "secrets": [
         {
-          "valueFrom": "arn:aws:ssm:us-east-2:<acoountid>:parameter/ecs-sample/prod/DB_PASSWORD",
+          "valueFrom": "arn:aws:ssm:us-east-2:<account_id>:parameter/ecs-sample/prod/DB_PASSWORD",
           "name": "DB_PASSWORD"
         },
         {
-          "valueFrom": "arn:aws:ssm:us-east-2:<acoountid>:parameter/ecs-sample/prod/REDIS_HOST",
+          "valueFrom": "arn:aws:ssm:us-east-2:<account_id>:parameter/ecs-sample/prod/REDIS_HOST",
           "name": "REDIS_HOST"
         },
         {
-          "valueFrom": "arn:aws:ssm:us-east-2:<acoountid>:parameter/ecs-sample/prod/DB_HOST",
+          "valueFrom": "arn:aws:ssm:us-east-2:<account_id>:parameter/ecs-sample/prod/DB_HOST",
           "name": "DB_HOST"
         },
         {
-          "valueFrom": "arn:aws:ssm:us-east-2:<acoountid>:parameter/ecs-sample/prod/SECRET_KEY",
+          "valueFrom": "arn:aws:ssm:us-east-2:<account_id>:parameter/ecs-sample/prod/SECRET_KEY",
           "name": "SECRET_KEY"
         }
       ],
-      "dockerSecurityOptions": null,
-      "memory": null,
+
       "memoryReservation": 512,
       "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "<acoountid>.dkr.ecr.us-east-2.amazonaws.com/ecs-sample-api:latest",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
+      "image": "<account_id>.dkr.ecr.us-east-2.amazonaws.com/ecs-sample-api:latest",
       "healthCheck": {
         "retries": 3,
         "command": [
@@ -80,30 +62,19 @@
           "python manage.py check"
         ],
         "timeout": 5,
-        "interval": 30,
-        "startPeriod": null
+        "interval": 30
       },
       "essential": true,
       "links": [],
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
       "dockerLabels": {
         "name": "ecs-sample-api",
         "env": "prod"
       },
-      "systemControls": null,
-      "privileged": null,
       "name": "api"
     },
     {
-      "dnsSearchDomains": null,
-      "environmentFiles": null,
       "logConfiguration": {
         "logDriver": "awslogs",
-        "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/ecs-sample-nginx",
           "awslogs-region": "us-east-2",
@@ -119,56 +90,31 @@
         }
       ],
       "command": [],
-      "linuxParameters": null,
       "cpu": 0,
       "environment": [],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
       "mountPoints": [],
-      "workingDirectory": null,
-      "secrets": null,
-      "dockerSecurityOptions": null,
-      "memory": null,
       "memoryReservation": 256,
       "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "<acoountid>.dkr.ecr.us-east-2.amazonaws.com/nginx:latest",
-      "startTimeout": null,
-      "firelensConfiguration": null,
+      "image": "<account_id>.dkr.ecr.us-east-2.amazonaws.com/ecs-sample-nginx:latest",
       "dependsOn": [
         {
           "containerName": "api",
           "condition": "HEALTHY"
         }
       ],
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": false,
+      "essential": true,
       "links": [],
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "systemControls": null,
-      "privileged": null,
       "name": "nginx"
     }
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": "arn:aws:iam::<acoountid>:role/sampleECSTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::<account_id>:role/sampleECSTaskExecutionRole",
   "family": "ecs-sample-api",
-  "pidMode": null,
   "requiresCompatibilities": [
     "FARGATE"
   ],
   "networkMode": "awsvpc",
   "cpu": "512",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
   "volumes": []
 }
