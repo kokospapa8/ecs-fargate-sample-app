@@ -1,5 +1,5 @@
 from .base import *
-from .secrets import *
+from .secrets_local import *
 
 DEBUG = True
 

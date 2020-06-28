@@ -19,7 +19,6 @@ services:
       - SECRET_KEY
       - ENV=dev
       - DJANGO_SETTINGS_MODULE=settings.local
-      - REDIS_HOST=redis
     depends_on:
       - redis
       - worker
@@ -35,7 +34,6 @@ services:
       - SECRET_KEY
       - ENV=dev
       - DJANGO_SETTINGS_MODULE=settings.local
-      - REDIS_HOST=redis
     depends_on:
       - redis
 
