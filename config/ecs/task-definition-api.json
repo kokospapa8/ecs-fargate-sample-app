@@ -2,14 +2,6 @@
   "executionRoleArn": "arn:aws:iam::<account_id>:role/sampleECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ecs-sample-app",
-          "awslogs-region": "us-east-2",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
       "portMappings": [
         {
           "hostPort": 8000,
@@ -73,14 +65,6 @@
       "name": "api"
     },
     {
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ecs-sample-nginx",
-          "awslogs-region": "us-east-2",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
       "entryPoint": [],
       "portMappings": [
         {

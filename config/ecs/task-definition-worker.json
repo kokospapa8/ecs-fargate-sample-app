@@ -2,14 +2,6 @@
   "executionRoleArn": "arn:aws:iam::<acoountid>:role/sampleECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ecs-sample-worker",
-          "awslogs-region": "us-east-2",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
       "portMappings": [],
       "cpu": 0,
       "environment": [
