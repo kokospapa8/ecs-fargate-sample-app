@@ -43,7 +43,7 @@
       "Type": "AWS::EC2::Subnet",
       "Properties": {
         "CidrBlock": "172.10.11.0/24",
-        "AvailabilityZone": "us-west-1a",
+        "AvailabilityZone": "us-east-2a",
         "VpcId": {
           "Ref": "vpc-ecs-sample"
         },
@@ -59,7 +59,7 @@
       "Type": "AWS::EC2::Subnet",
       "Properties": {
         "CidrBlock": "172.10.2.0/24",
-        "AvailabilityZone": "us-west-1b",
+        "AvailabilityZone": "us-east-2b",
         "VpcId": {
           "Ref": "vpc-ecs-sample"
         },
@@ -75,7 +75,7 @@
       "Type": "AWS::EC2::Subnet",
       "Properties": {
         "CidrBlock": "172.10.12.0/24",
-        "AvailabilityZone": "us-west-1b",
+        "AvailabilityZone": "us-east-2b",
         "VpcId": {
           "Ref": "vpc-ecs-sample"
         },
@@ -91,7 +91,7 @@
       "Type": "AWS::EC2::Subnet",
       "Properties": {
         "CidrBlock": "172.10.1.0/24",
-        "AvailabilityZone": "us-west-1a",
+        "AvailabilityZone": "us-east-2a",
         "VpcId": {
           "Ref": "vpc-ecs-sample"
         },
@@ -117,7 +117,7 @@
     "dopt-ecs-sample": {
       "Type": "AWS::EC2::DHCPOptions",
       "Properties": {
-        "DomainName": "us-west-1.compute.internal",
+        "DomainName": "us-east-2.compute.internal",
         "DomainNameServers": [
           "AmazonProvidedDNS"
         ]
@@ -235,7 +235,7 @@
         "Engine": "redis",
         "EngineVersion": "5.0.6",
         "NumCacheNodes": "1",
-        "PreferredAvailabilityZone": "us-west-1b",
+        "PreferredAvailabilityZone": "us-east-2b",
         "PreferredMaintenanceWindow": "thu:02:30-thu:03:30",
         "CacheSubnetGroupName": {
           "Ref": "cachesubnetecssampleredissubnetgroup"
@@ -259,7 +259,7 @@
         "Engine": "redis",
         "EngineVersion": "5.0.6",
         "NumCacheNodes": "1",
-        "PreferredAvailabilityZone": "us-west-1a",
+        "PreferredAvailabilityZone": "us-east-2a",
         "PreferredMaintenanceWindow": "thu:02:30-thu:03:30",
         "CacheSubnetGroupName": {
           "Ref": "cachesubnetecssampleredissubnetgroup"
