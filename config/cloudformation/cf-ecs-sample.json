@@ -582,6 +582,28 @@
         }
       }
     },
+    "subnetroute3": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "RtbPublic"
+        },
+        "SubnetId": {
+          "Ref": "EcsSamplePublic1"
+        }
+      }
+    },
+    "subnetroute4": {
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+      "Properties": {
+        "RouteTableId": {
+          "Ref": "RtbPublic"
+        },
+        "SubnetId": {
+          "Ref": "EcsSamplePublic2"
+        }
+      }
+    },
     "subnetroute5": {
       "Type": "AWS::EC2::SubnetRouteTableAssociation",
       "Properties": {
