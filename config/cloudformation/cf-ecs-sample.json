@@ -255,7 +255,17 @@
               "MinCapacity" : 4,
               "MaxCapacity" : 8,
               "SecondsUntilAutoPause" : 1000
-          }
+          },
+          "VpcSecurityGroupIds:": [
+            {
+              "Ref": "sgecssamplemysql"
+            }
+          ],
+          "DBSubnetGroupName:": [
+            {
+              "Ref": "dbsubnetecssamplesubnetgroup"
+            }
+          ]
       }
     },
 
