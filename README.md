@@ -8,3 +8,6 @@ refer to following blog posts.
 [How to deploy django app to ECS Fargate Part2](https://www.notion.so/kokospapa/How-to-deploy-django-app-to-ECS-Fargate-part2-93a372ebd8b941cea99d03de8ca98863)
 
 [How to deploy django app to ECS Fargate Part3](https://www.notion.so/kokospapa/How-to-deploy-django-app-to-ECS-Fargate-part3-13875ffa0c7e4e1da3d1c46cad0bae94)
+
+For CDK deployment, refer to following link.
+[ECS SAMPLE CDK DEPLOYMENT](https://github.com/kokospapa8/ecs-fargate-sample-app/tree/master/config/cdk)

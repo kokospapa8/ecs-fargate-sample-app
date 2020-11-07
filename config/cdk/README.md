@@ -1,4 +1,4 @@
-#How to deploy CDK
+# How to deploy CDK
 
 ## Install AWS-CDK
 [How to InstallAWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html)
