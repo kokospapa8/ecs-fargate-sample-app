@@ -44,7 +44,7 @@ class RedisStack(core.NestedStack):
                                               )
         redis.add_depends_on(subnets_group)
 
-        core.CfnOutput(self, "redis_configuration_endpoint", value=redis.attr)
+        # core.CfnOutput(self, "redis_configuration_endpoint", value=redis.attr_configuration_end_point_address)
 
         self.output_props = props.copy()
         self.output_props['redis'] = redis
