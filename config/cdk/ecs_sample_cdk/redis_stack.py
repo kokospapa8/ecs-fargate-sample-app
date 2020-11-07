@@ -44,7 +44,6 @@ class RedisStack(core.NestedStack):
                                               )
         redis.add_depends_on(subnets_group)
 
-        # core.CfnOutput(self, "redis_configuration_endpoint", value=redis.attr_configuration_end_point_address)
 
         self.output_props = props.copy()
         self.output_props['redis'] = redis
@@ -52,21 +51,3 @@ class RedisStack(core.NestedStack):
     @property
     def outputs(self):
         return self.output_props
-
-        # core.CfnOutput(self, "REDIS_endpoint", value=redis.get_att("ElastiCacheCluster.RedisEndpoint.Address").)
-
-#   ElastiCacheClusterArn:
-#     Description: ElastiCache Cluster Arn
-#     Value: !Sub arn:aws:elasticache:${AWS::Region}:${AWS::AccountId}:cluster/${ElastiCacheCluster}
-#     Export:
-#       Name: !Sub ${AWS::StackName}-ElastiCacheClusterArn
-#
-# ElastiCacheAddress:
-# Description: ElastiCache
-# endpoint
-# address
-# Value: !If[IsRedis, !GetAtt
-# ElastiCacheCluster.RedisEndpoint.Address, !GetAtt
-# ElastiCacheCluster.ConfigurationEndpoint.Address]
-# Export:
-# Name: !Sub ${AWS:: StackName}-ElastiCacheAddress
